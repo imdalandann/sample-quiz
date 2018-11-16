@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -8,16 +7,13 @@
 <body>
     <style>
     	body{
-			
-			color: #000305;
-			font-size: 87.5%;
-			font-family: Arial, 'Lucida Sans Unicode';
-			line-height: 1.5;
-			text-align: left;
-
+	    color: #000305;
+	    font-size: 87.5%;
+	    font-family: Arial, 'Lucida Sans Unicode';
+	    line-height: 1.5;
+	    text-align: left;
             width: 100%;
             height: 250px;
-
     	}
 
         #table_1 {
@@ -29,6 +25,7 @@
             text-align: center;
 
         }
+	    
         p, h2{
         	color: black;
         	font-family: Arial, 'Lucida Sans Unicode';
@@ -41,179 +38,179 @@
 
     </style>
     <center>
-    <div id="table_1">
+	    <div id="table_1">
 
-        <h2>HTML QUIZ</h2>
-        <hr>
-        <div id="center001"><p>Question:<text id="q001">0</text> <br>Score: <text id="score001">0</text> <br>Attempt: <text id="attempts"> 3</p></text></div>
-        <p id="question01"></p>
-        <p id="msg01"></p>
-        <br />
-        <div id="starter01">
-            <button onclick="begin001()" id="b001">Begin</button><br />
-        </div>
-        <p id="n001"></p>
+		<h2>HTML QUIZ</h2>
+		<hr>
+		<div id="center001"><p>Question:<text id="q001">0</text> <br>Score: <text id="score001">0</text> <br>Attempt: <text id="attempts"> 3</p></text></div>
+		<p id="question01"></p>
+		<p id="msg01"></p>
+		<br />
+		<div id="starter01">
+		    <button onclick="begin001()" id="b001">Begin</button><br />
+		</div>
+		<p id="n001"></p>
 
-        <script>
-            var b = 0;
-            b++;
-            var c = 3;
-            c--;
-            var d = 0;
-            d++;
+		<script>
+		    var b = 0;
+		    b++;
+		    var c = 3;
+		    c--;
+		    var d = 0;
+		    d++;
 
-            function begin001() {
-                document.getElementById("q001").innerHTML = d++;
-                document.getElementById("question01").innerHTML = "What is HTML stands for?" + "<br /><br />" +
-                 "<button onclick=ans001() id=q1>Hypertext Markup Language</button><br/>" + 
-                 "<button onclick=ans002() id=q2>High Text Markup Language</button><br />" + 
-                 "<button onclick=ans002() id=q3>Hyperlink and Text Markup Language</button><br />";
-			document.getElementById("starter01").innerHTML = "";
-			}
-
-			function ans001() {
-			    document.getElementById("score001").innerHTML = b++;
-			document.getElementById("question01").innerHTML = "Correct";
-			document.getElementById("starter01").innerHTML = "";
-			document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
-			}
-
-			function ans002() {
-			document.getElementById("question01").innerHTML = "Incorrect";
-			document.getElementById("starter01").innerHTML = "";
-			document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
-			document.getElementById("attempts").innerHTML = c--;
-			if (c < 0) {
-			    document.getElementById("question01").innerHTML = "";
-			    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
-			    document.getElementById("n001").innerHTML = "";
-			}
-			}
-
-			function nxt1() {
-			document.getElementById("question01").innerHTML = "What is CSS stands for?" + "<br /><br /><br />" + 
-			"<button onclick=ans004() id=q4>Cascading Sheet Style</button><br />" + 
-			"<button onclick=ans004() id=q5>Cascading Styling Sheet</button><br />" + 
-			"<button onclick=ans003() id=q6>Cascading Style Sheet</button><br />";
-			document.getElementById("n001").innerHTML = "";
+		    function begin001() {
 			document.getElementById("q001").innerHTML = d++;
+			document.getElementById("question01").innerHTML = "What is HTML stands for?" + "<br /><br />" +
+			 "<button onclick=ans001() id=q1>Hypertext Markup Language</button><br/>" + 
+			 "<button onclick=ans002() id=q2>High Text Markup Language</button><br />" + 
+			 "<button onclick=ans002() id=q3>Hyperlink and Text Markup Language</button><br />";
+				document.getElementById("starter01").innerHTML = "";
+				}
 
-			}
+				function ans001() {
+				    document.getElementById("score001").innerHTML = b++;
+				document.getElementById("question01").innerHTML = "Correct";
+				document.getElementById("starter01").innerHTML = "";
+				document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
+				}
 
-			function ans003() {
-			    document.getElementById("score001").innerHTML = b++;
-			    document.getElementById("question01").innerHTML = "Correct";
-			    document.getElementById("starter01").innerHTML = "";
-			    document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
-			}
+				function ans002() {
+				document.getElementById("question01").innerHTML = "Incorrect";
+				document.getElementById("starter01").innerHTML = "";
+				document.getElementById("n001").innerHTML = "<button onclick=nxt1()>Next</button><br />";
+				document.getElementById("attempts").innerHTML = c--;
+				if (c < 0) {
+				    document.getElementById("question01").innerHTML = "";
+				    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+				    document.getElementById("n001").innerHTML = "";
+				}
+				}
 
-			function ans004() {
-			document.getElementById("question01").innerHTML = "Incorrect";
-			document.getElementById("starter01").innerHTML = "";
-			document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
-			document.getElementById("attempts").innerHTML = c--;
-			if (c < 0) {
-			    document.getElementById("question01").innerHTML = "";
-			    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
-			    document.getElementById("n001").innerHTML = "";
-			}
-			}
+				function nxt1() {
+				document.getElementById("question01").innerHTML = "What is CSS stands for?" + "<br /><br /><br />" + 
+				"<button onclick=ans004() id=q4>Cascading Sheet Style</button><br />" + 
+				"<button onclick=ans004() id=q5>Cascading Styling Sheet</button><br />" + 
+				"<button onclick=ans003() id=q6>Cascading Style Sheet</button><br />";
+				document.getElementById("n001").innerHTML = "";
+				document.getElementById("q001").innerHTML = d++;
 
-			function nxt2() {
-			document.getElementById("question01").innerHTML = "&lt;h1&gt; is the tag use for the largest heading." + "<br /><br /><br />" + 
-			"<button onclick=ans005() id=q4>True</button><br />" + 
-			"<button onclick=ans006() id=q5>False</button><br />" +
-			"<button onclick=ans006() id=q6>I don't know</button><br />";
-			document.getElementById("n001").innerHTML = "";
-			document.getElementById("q001").innerHTML = d++;
+				}
 
-			}
+				function ans003() {
+				    document.getElementById("score001").innerHTML = b++;
+				    document.getElementById("question01").innerHTML = "Correct";
+				    document.getElementById("starter01").innerHTML = "";
+				    document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
+				}
 
-			function ans005() {
-			    document.getElementById("score001").innerHTML = b++;
-			    document.getElementById("question01").innerHTML = "Correct";
-			    document.getElementById("starter01").innerHTML = "";
-			    document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
-			}
+				function ans004() {
+				document.getElementById("question01").innerHTML = "Incorrect";
+				document.getElementById("starter01").innerHTML = "";
+				document.getElementById("n001").innerHTML = "<button onclick=nxt2()>Next</button><br />";
+				document.getElementById("attempts").innerHTML = c--;
+				if (c < 0) {
+				    document.getElementById("question01").innerHTML = "";
+				    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+				    document.getElementById("n001").innerHTML = "";
+				}
+				}
 
-			function ans006() {
-			document.getElementById("question01").innerHTML = "Incorrect";
-			document.getElementById("starter01").innerHTML = "";
-			document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
-			document.getElementById("attempts").innerHTML = c--;
-			if (c < 0) {
-			    document.getElementById("question01").innerHTML = "";
-			    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
-			    document.getElementById("n001").innerHTML = "";
-			}
-			}
+				function nxt2() {
+				document.getElementById("question01").innerHTML = "&lt;h1&gt; is the tag use for the largest heading." + "<br /><br /><br />" + 
+				"<button onclick=ans005() id=q4>True</button><br />" + 
+				"<button onclick=ans006() id=q5>False</button><br />" +
+				"<button onclick=ans006() id=q6>I don't know</button><br />";
+				document.getElementById("n001").innerHTML = "";
+				document.getElementById("q001").innerHTML = d++;
 
-			function nxt3() {
-			document.getElementById("question01").innerHTML = "&lt;p&gt; is use to display paragraph." + "<br /><br /><br />" + 
-			"<button onclick=ans007() id=q4>True</button><br />" + 
-			"<button onclick=ans008() id=q5>False</button><br />" +
-			"<button onclick=ans008() id=q6>I don't know</button><br />";
-			document.getElementById("n001").innerHTML = "";
-			document.getElementById("q001").innerHTML = d++;
+				}
 
-			}
+				function ans005() {
+				    document.getElementById("score001").innerHTML = b++;
+				    document.getElementById("question01").innerHTML = "Correct";
+				    document.getElementById("starter01").innerHTML = "";
+				    document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
+				}
 
-			function ans007() {
-			    document.getElementById("score001").innerHTML = b++;
-			    document.getElementById("question01").innerHTML = "Correct";
-			    document.getElementById("starter01").innerHTML = "";
-			    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
-			}
+				function ans006() {
+				document.getElementById("question01").innerHTML = "Incorrect";
+				document.getElementById("starter01").innerHTML = "";
+				document.getElementById("n001").innerHTML = "<button onclick=nxt3()>Next</button><br />";
+				document.getElementById("attempts").innerHTML = c--;
+				if (c < 0) {
+				    document.getElementById("question01").innerHTML = "";
+				    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+				    document.getElementById("n001").innerHTML = "";
+				}
+				}
 
-			function ans008() {
-			document.getElementById("question01").innerHTML = "Incorrect";
-			document.getElementById("starter01").innerHTML = "";
-			document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
-			document.getElementById("attempts").innerHTML = c--;
-			if (c < 0) {
-			    document.getElementById("question01").innerHTML = "";
-			    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
-			    document.getElementById("n001").innerHTML = "";
-			}
-			}
+				function nxt3() {
+				document.getElementById("question01").innerHTML = "&lt;p&gt; is use to display paragraph." + "<br /><br /><br />" + 
+				"<button onclick=ans007() id=q4>True</button><br />" + 
+				"<button onclick=ans008() id=q5>False</button><br />" +
+				"<button onclick=ans008() id=q6>I don't know</button><br />";
+				document.getElementById("n001").innerHTML = "";
+				document.getElementById("q001").innerHTML = d++;
 
-			function nxt4() {
-			document.getElementById("question01").innerHTML = "Every html tags have end tags" + "<br /><br /><br />" + 
-			"<button onclick=ans009() id=q4>True</button><br />" + 
-			"<button onclick=ans008() id=q5>False</button><br />" +
-			"<button onclick=ans009() id=q6>I don't know</button><br />";
-			document.getElementById("n001").innerHTML = "";
-			document.getElementById("q001").innerHTML = d++;
+				}
 
-			}
+				function ans007() {
+				    document.getElementById("score001").innerHTML = b++;
+				    document.getElementById("question01").innerHTML = "Correct";
+				    document.getElementById("starter01").innerHTML = "";
+				    document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
+				}
 
-			function ans008() {
-			    document.getElementById("score001").innerHTML = b++;
-			    document.getElementById("question01").innerHTML = "Correct";
-			    document.getElementById("starter01").innerHTML = "";
-			    document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
-			}
+				function ans008() {
+				document.getElementById("question01").innerHTML = "Incorrect";
+				document.getElementById("starter01").innerHTML = "";
+				document.getElementById("n001").innerHTML = "<button onclick=nxt4()>Next</button><br />";
+				document.getElementById("attempts").innerHTML = c--;
+				if (c < 0) {
+				    document.getElementById("question01").innerHTML = "";
+				    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+				    document.getElementById("n001").innerHTML = "";
+				}
+				}
 
-			function ans009() {
-			document.getElementById("question01").innerHTML = "Incorrect";
-			document.getElementById("starter01").innerHTML = ""
-			document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
-			document.getElementById("attempts").innerHTML = c--;
-			if (c < 0) {
-			    document.getElementById("question01").innerHTML = "";
-			    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
-			    document.getElementById("n001").innerHTML = "";
-			}
-			}
+				function nxt4() {
+				document.getElementById("question01").innerHTML = "Every html tags have end tags" + "<br /><br /><br />" + 
+				"<button onclick=ans009() id=q4>True</button><br />" + 
+				"<button onclick=ans008() id=q5>False</button><br />" +
+				"<button onclick=ans009() id=q6>I don't know</button><br />";
+				document.getElementById("n001").innerHTML = "";
+				document.getElementById("q001").innerHTML = d++;
 
-			function nxt5() {
-			document.getElementById("question01").innerHTML = "";
-			document.getElementById("msg01").innerHTML = "End of Quiz.";
-			document.getElementById("n001").innerHTML = "";
-			}
+				}
 
-        </script>
-    </div>
+				function ans008() {
+				    document.getElementById("score001").innerHTML = b++;
+				    document.getElementById("question01").innerHTML = "Correct";
+				    document.getElementById("starter01").innerHTML = "";
+				    document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
+				}
+
+				function ans009() {
+				document.getElementById("question01").innerHTML = "Incorrect";
+				document.getElementById("starter01").innerHTML = ""
+				document.getElementById("n001").innerHTML = "<button onclick=nxt5()>Next</button><br />";
+				document.getElementById("attempts").innerHTML = c--;
+				if (c < 0) {
+				    document.getElementById("question01").innerHTML = "";
+				    document.getElementById("msg01").innerHTML = "Sorry. You lost!";
+				    document.getElementById("n001").innerHTML = "";
+				}
+				}
+
+				function nxt5() {
+				document.getElementById("question01").innerHTML = "";
+				document.getElementById("msg01").innerHTML = "End of Quiz.";
+				document.getElementById("n001").innerHTML = "";
+				}
+
+		</script>
+	    </div>
     </center>
 </body>
 </html>
